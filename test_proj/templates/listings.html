@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %} Listings {% endblock%}
+{% block content_body %}
+<h1>All available Users:</h1>
+<ul>
+  {% for user in users %}
+  <li>{{ user.first_name }} {{user.last_name}}</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'index' %}">Home</a>
+{% endblock%}
